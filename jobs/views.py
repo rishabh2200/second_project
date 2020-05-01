@@ -1,5 +1,6 @@
 from django.shortcuts import render
+from .models import jobs
 
-# Create your views here.
 def home(request):
-    return render(request,'jobs/home.html')
+    qwerty=jobs.objects.all()
+    return render(request,'jobs/home.html',{'bansal':qwerty})
