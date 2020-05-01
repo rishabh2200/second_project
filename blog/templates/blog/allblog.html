@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.6">
-    <title>Album example · Bootstrap</title>
+    <title>aisa hi nam rakh diya</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/album/">
 
@@ -47,7 +47,7 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">rishabh bansal</a>
+      <a class="navbar-brand" href="{% url 'home' %}">rishabh bansal</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -69,7 +69,7 @@
 <h1>latest post</h1>
 <hr/>
 {% for rishabh in bansal %}
-<a href=""><h1>{{rishabh.title}}</h1></a>
+<a href="{% url 'detail' rishabh.id %}"><h1>{{rishabh.title}}</h1></a>
 {{rishabh.pub_date}}
 <img src="{{ rishabh.image.url }}"  height="225" width="20%" />
 <p> {{rishabh.summary}}</p>
